@@ -87,6 +87,16 @@
     </option>
     <option name="moduleSettings">
       <map>
+        <entry key="hibernate-special-examples">
+          <value>
+            <ModuleSettings />
+          </value>
+        </entry>
+        <entry key="hibernate-spring-collections">
+          <value>
+            <ModuleSettings />
+          </value>
+        </entry>
         <entry key="hibernate-spring-minimal">
           <value>
             <ModuleSettings />

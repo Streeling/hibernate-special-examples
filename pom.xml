@@ -11,6 +11,7 @@
 
   <modules>
     <module>hibernate-spring-minimal</module>
+    <module>hibernate-spring-collections</module>
   </modules>
 
 </project>
