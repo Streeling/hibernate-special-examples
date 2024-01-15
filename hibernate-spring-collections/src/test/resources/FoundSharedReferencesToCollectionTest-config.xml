@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+  <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="packagesToScan" value="org.example"/>
+    <property name="dataSource" ref="dataSource"/>
+    <property name="jpaVendorAdapter">
+      <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="generateDdl" value="false"/>
+      </bean>
+    </property>
+  </bean>
+
+  <jdbc:initialize-database>
+    <jdbc:script location="classpath:sql/FoundSharedReferencesToCollectionTest.sql"/>
+  </jdbc:initialize-database>
+
+  <bean id="userDao" class="org.example.FoundSharedReferencesToCollectionTest.UserDao"/>
+
+  <bean id="departmentDao" class="org.example.FoundSharedReferencesToCollectionTest.DepartmentDao"/>
+
+  <bean id="departmentPhoneDao" class="org.example.FoundSharedReferencesToCollectionTest.DepartmentPhoneDao"/>
+
+</beans>

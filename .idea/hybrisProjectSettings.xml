@@ -87,6 +87,11 @@
     </option>
     <option name="moduleSettings">
       <map>
+        <entry key="atomikos-minimal">
+          <value>
+            <ModuleSettings />
+          </value>
+        </entry>
         <entry key="hibernate-special-examples">
           <value>
             <ModuleSettings />

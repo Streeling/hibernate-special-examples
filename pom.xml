@@ -12,6 +12,7 @@
   <modules>
     <module>hibernate-spring-minimal</module>
     <module>hibernate-spring-collections</module>
+    <module>atomikos-minimal</module>
   </modules>
 
 </project>
